@@ -1,0 +1,106 @@
+<!DOCTYPE html>    <!--copied code from Bootstrap,Docs,Introduction-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    
+    <title>Shoppers</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">        <!-- for css file connection we add this-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">  <!--for icon insert link is required--><!--path -> bootstarp.com,icons,install,CDN,1st link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+      .topnav {
+    position: relative;
+    background-color:#f5a255e7;
+    overflow: hidden;
+  }
+  .topnav a {
+  float: left;
+  color: #181717;
+  text-align: center;
+  padding: 5px 2px;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+</style>
+</head>
+<body>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/popper.js"></script>
+    <div class="container box">
+      <div class="row">
+         <div class="col-md-12 mt-1 text-bg-light ">
+          <div class="topnav">
+              <a href="easy.html" alt=""><p class="fst-italic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Easy Return |</p></a>
+              <a href="" alt=""><p class="fst-italic">Cod Available | </p></a>
+              <a href="" alt=""><p class="fst-italic">Free Delivery | </p></a>
+        </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-12 mt-1">
+          <nav class="navbar navbar-expand-lg " style="background-color: #f5a255;"> <!--***copied from bootstrap,Docs,navbar,1st html code-->
+          <div class="col-md-2 ">
+            <a class="navbar-brand" href="/home"><strong><h4><p class="fst-italic">&nbsp;&nbsp;Snuggle</strong>&nbsp;<small><sub>Buddies&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</sub></small></h4></a></p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            </div>
+            <div class="col-md-4 ">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search For Products , Brands & Many More" aria-label="Search" >
+              <button class="btn btn-outline-success text-white" type="submit"><i class="bi bi-search"></i></button>
+            </form>
+            </div>
+            {% if user.is_authenticated %}
+            <div class="col-md-3 text-white">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/logout" >&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-box-arrow-in-right"><strong>&nbsp;&nbsp;Logout</strong></i></a>
+            </li>
+            </ul>
+            </div>
+            {% else %}
+            <div class="col-md-3 text-white">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/login" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-box-arrow-in-right"><strong>&nbsp;&nbsp;&nbsp;Login/SignUp</strong></i></a>
+            </li>
+            </ul>
+            </div>
+            {% endif %}
+          </nav>
+          </div>
+        </div>
+<div class="row">
+    <div class="col-md-12">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2056225412516!2d73.83845847519163!3d18.519607882573805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf3ec1207915%3A0xb73335cd0d52335c!2sItvedant%20Pvt%20Ltd%20Pune!5e0!3m2!1sen!2sin!4v1704696218952!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>  
+<div class="row">                                        <!--end of map-->
+<div class="col-md-6 mt-5">
+<h4><i class="bi bi-building-fill">
+   </h4>shreyas raaga<br>
+    flat no 204 near babar udyan<br>
+    mohanagar chinchwad<br>
+    411019<br></i>
+        <h4><i class="bi bi-telephone-fill text-danger" ></i>&nbsp;&nbsp;8530170082</h4>
+        <h4><i class="bi bi-envelope-at-fill text-info">&nbsp;&nbsp;<a href="siddhi@gmail.com">siddhi@gmail.com</a></i></h4>
+    </div>
+    <div class="col-md-6 mt-5">
+      <h3> <i class="bi bi-question-circle"></i> Question If Any</h3>
+      <hr>
+      <form method="post" action="">
+        <div class="mb-3">
+        <label for="input1" class="form_label">Name:</label>
+        <input type="text" class="form_control" id="input1" name="uname"><br><br>
+        <a href=""><button class='btn btn-success'> Send</button></a>
+        </div>
+      </form>
+    </div>
+</div></div>
+</body>
+</html>
